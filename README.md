@@ -5,8 +5,7 @@ Electron wrap around Ripple Wallet Generator[Ripple Wallet Generator](https://gi
 
 ### Download and install
 
-[Windows]()
-[Mac]()
+[Windows](https://github.com/unusec/ripple-wallet-generator-app/releases/download/1.0.0.0/ripple-wallet-generator-win.zip) - [Mac](https://github.com/unusec/ripple-wallet-generator-app/releases/download/1.0.0.1/ripple-wallet-generator-mac.zip)
 
 
 ## Donations
