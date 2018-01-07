@@ -1,0 +1,47 @@
+{
+	"name": "ripple-wallet-generator-app",
+	"version": "1.0.0",
+	"description": "Electron wrap around Ripple Wallet Generator, that can be installed on a offline PC/MAC.",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"make": "build"
+	},
+	"build": {
+		"appId": "com.electron.ripple-wallet-generator",
+		"productName": "Ripple Wallet Generator",
+		"copyright": "Copyright © 2018 UnuSec",
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			],
+			"icon": "assets/icons/win/icon.ico"
+		},
+		"mac": {
+			"category": "public.app-category.finance",
+			"target": "dmg",
+			"icon": "assets/icons/mac/icon.icns"
+		},
+		"linux": {
+			"target": "AppImage",
+			"icon": "assets/icons/png/icon.png"
+		}
+	},
+	"keywords": [],
+	"author": "UnuSec",
+	"license": "ISC",
+	"devDependencies": {
+		"7zip-bin-mac": "^1.0.1",
+		"electron": "^1.7.10",
+		"electron-builder": "^19.52.1"
+	},
+	"dependencies": {
+		"ripple-lib": "^0.17.9"
+	}
+}

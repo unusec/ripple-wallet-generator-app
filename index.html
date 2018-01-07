@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/bulma.min.css" rel="stylesheet" />
+	<link href="assets/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="app" class="container">
+		<!-- START ARTICLE FEED -->
+		<section class="articles">
+			<div class="column is-8 is-offset-2">
+				<!-- START PROMO BLOCK -->
+				<section class="hero is-primary is-bold is-small promo-block">
+					<div class="hero-body">
+						<div class="container">
+							<h1 class="title">
+								<i class="fa fa-gear"></i>
+								Offline Ripple Wallet Generator
+							</h1>
+						</div>
+					</div>
+				</section>
+				<!-- END PROMO BLOCK -->
+				<!-- START ARTICLE -->
+				<div class="card article">
+					<div class="card-content">
+						<div class="media">
+							<div class="media-center">
+								<img src="assets/ripple.svg" class="author-image" width="24px" height="24px" alt="Ripple Logo">
+							</div>
+						</div>
+						<div class="content article-body">
+							<h3>Wallet Address: {{wallet.address}}</h3>
+							<h3>Wallet Secret: {{wallet.secret}}</h3>
+						</div>
+						<div class="has-text-centered">
+							<button class="button is-primary is-rounded is-medium" @click="newWallet()">
+								<span class="icon">
+									<i class="fa fa-refresh"></i>
+								</span>
+								<span>REFRESH</span>
+							</button>
+						</div>
+					</div>
+					<!-- END ARTICLE -->
+				</div>
+				<!-- START ARTICLE -->
+				<div class="card article">
+					<div class="card-content">
+						<div class="content article-body">
+							<p class="has-text-danger">Write down the private key(do not print it) and store it a secure place, like a bank safe deposit box if your wallet is really big.</p>
+							<p>After you generate a wallet you need to activate it by depositing at least 20 XRP(this ammount might be decreased in the future as XRP price will rise).</p>
+							<p>You can check your wallet balance online at: </p><a href="https://xrpcharts.ripple.com/#/graph">xrpcharts.ripple.com/#/graph</a>
+						</div>
+					</div>
+					<!-- END ARTICLE -->
+				</div>
+		</section>
+		</div>
+
+		<script src="assets/vue.min.js"></script>
+		<script>
+
+			const { remote } = require('electron');
+			const main = remote.require('./main.js');
+
+			var app = new Vue({
+				el: '#app',
+				data: {
+					wallet: {},
+				},
+				mounted() {
+					this.wallet = main.getWallet();
+				},
+				methods: {
+					newWallet: function () {
+						this.wallet = main.getWallet();
+					}
+				}
+			});
+
+		</script>
+</body>
+
+</html>
