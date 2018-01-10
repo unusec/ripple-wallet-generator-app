@@ -11,6 +11,9 @@ Electron wrap around Ripple Wallet Generator[Ripple Wallet Generator](https://gi
 ## Donations
 
 Much appreciate it and only if you feel like it, you can donate XRP to this address:
+<p align="center">
+  <img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=rUXmS2w8dbwA98yAws36k1Y4E7XkzvkfwE&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+</p>
 
 ```
 rUXmS2w8dbwA98yAws36k1Y4E7XkzvkfwE
